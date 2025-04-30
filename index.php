@@ -30,7 +30,7 @@ $conexion = mysqli_connect('localhost', 'root', '', 'kiosco', '3307');
         while($mostrar = mysqli_fetch_array($result)) {
         ?> 
         <tr>
-            <td><?php echo $mostrar['cliente'] ?></td>
+            <td><?php echo $mostrar['Cliente'] ?></td>
             <td><?php echo $mostrar['%'] ?></td>
             <td><?php echo $mostrar['Cantidad de Ventas'] ?></td>
             <td><?php echo $mostrar['Cantidad de Devoluciones'] ?></td>
@@ -41,7 +41,32 @@ $conexion = mysqli_connect('localhost', 'root', '', 'kiosco', '3307');
     </table>
     </center>
     <br>
+
     <h2><u>Estadistica por MES:</u></h2>
-        
+    
+    <br>
+    <center>
+    <table border="2">
+        <tr>
+            <td>Meses</td>
+            <td>Ventas</td>
+
+        </tr>
+
+        <?php
+        $sql = "SELECT * FROM ventas_x_mes";
+        $result = mysqli_query($conexion, $sql);
+
+        while($mostrar = mysqli_fetch_array($result)) {
+        ?> 
+        <tr>
+            <td><?php echo $mostrar['meses'] ?></td>
+            <td><?php echo $mostrar['ventas'] ?></td>
+        </tr>
+        <?php
+        }
+        ?>
+    </table>
+    </center>
 </body>
 </html>

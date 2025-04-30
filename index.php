@@ -7,30 +7,41 @@ $conexion = mysqli_connect('localhost', 'root', '', 'kiosco', '3307');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
 
-    <table border="1">
+    <center><h1>Ventas del kiosco</h1></center>
+<br>
+    <center>
+    <table border="2">
         <tr>
-            <td>ncli</td>
-            <td>raso</td>
+            <td>Cliente</td>
+            <td>%</td>
+            <td>Cantidad de Ventas</td>
+            <td>Cantidad de Devoluciones</td>
         </tr>
 
         <?php
-        $sql = "SELECT * FROM clientes";
+        $sql = "SELECT * FROM porcentaje_ventas";
         $result = mysqli_query($conexion, $sql);
 
         while($mostrar = mysqli_fetch_array($result)) {
         ?> 
         <tr>
-            <td><?php echo $mostrar['ncli'] ?></td>
-            <td><?php echo $mostrar['raso'] ?></td>
+            <td><?php echo $mostrar['cliente'] ?></td>
+            <td><?php echo $mostrar['%'] ?></td>
+            <td><?php echo $mostrar['Cantidad de Ventas'] ?></td>
+            <td><?php echo $mostrar['Cantidad de Devoluciones'] ?></td>
         </tr>
         <?php
         }
         ?>
     </table>
-
+    </center>
+    <br>
+    <h2><u>Estadistica por MES:</u></h2>
+        
 </body>
 </html>

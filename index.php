@@ -15,7 +15,7 @@ $conexion = mysqli_connect('localhost', 'root', '', 'kiosco', '3307');
     <center><h1>Ventas del kiosco</h1></center>
 <br>
     <center>
-    <table border="2">
+    <table>
         <tr>
             <td>Cliente</td>
             <td>%</td>
@@ -46,7 +46,7 @@ $conexion = mysqli_connect('localhost', 'root', '', 'kiosco', '3307');
     
     <br>
     <center>
-    <table border="2">
+    <table>
         <tr>
             <td>Meses</td>
             <td>Ventas</td>

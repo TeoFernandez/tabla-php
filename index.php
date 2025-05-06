@@ -8,11 +8,11 @@ $conexion = mysqli_connect('localhost', 'root', '', 'kiosco', '3307');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Ventas</title>
 </head>
 <body>
 
-    <center><h1>Ventas del kiosco</h1></center>
+    <center><h1>Promedio de ventas del kiosco</h1></center>
 <br>
     <center>
     <table>
@@ -68,5 +68,6 @@ $conexion = mysqli_connect('localhost', 'root', '', 'kiosco', '3307');
         ?>
     </table>
     </center>
+    <br>
 </body>
 </html>
